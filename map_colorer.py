@@ -17,13 +17,16 @@ def main():
 def build_image_df(image):
 	df = pd.DataFrame( index=range(len(image)), columns=range(len(image[0])) )
 	for i in df.index:
-		df.loc[i] = [ (r,g,b) for r,g,b,a in image[i] ]
+		df.loc[i] = [ r for r,g,b,a in image[i] ]
 	return df
 
-def recalc_pixels(image_df, ):
-	for i in image_df.index:
-		for j in image_df.columns:
+def recalc_pixels(image_df, destination_coords):
+	#for i in image_df.index:
+	#	for j in image_df.columns:
+	return None
 
+def white_pixels_to_zero(image_df):
+	return None
 
 if __name__ == '__main__':
 	main()
